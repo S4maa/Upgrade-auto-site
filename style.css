@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  background-image: url('fundo.png');
+  background-size: contain;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  height: 50px;
+}
+.menu-icon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+.hidden-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #222;
+  padding: 10px;
+}
+.hidden-menu a {
+  color: white;
+  padding: 10px 0;
+  text-decoration: none;
+}
+.hidden-menu.open {
+  display: flex;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: blur(1px);
+  z-index: -1;
+}
+.hero-text {
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+.hero-text h1 {
+  font-size: 36px;
+  color: #fff;
+}
+.hero-text p {
+  font-size: 20px;
+  color: #ddd;
+}
+.whatsapp-button, .map-button {
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.map-button {
+  background-color: #ff4444;
+}
+.whatsapp-button img {
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+section {
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: rgba(28, 28, 28, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+}
+.servico-video {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.galeria-imagens {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.galeria-imagens img {
+  width: 300px;
+  border-radius: 8px;
+}
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+}

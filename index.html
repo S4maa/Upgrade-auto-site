@@ -1,0 +1,89 @@
+from pathlib import Path
+import zipfile
+
+# Criar nova estrutura da landing page atualizada com melhorias
+
+index_html = """<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upgrade Auto Service</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Upgrade" class="logo">
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  </header>
+
+  <nav id="menu" class="hidden-menu">
+    <a href="#peliculas">Películas</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h1>Transformamos o visual do seu veículo</h1>
+      <p>Com materiais de alta retenção solar e acabamento profissional</p>
+      <a href="https://wa.me/message/R57LHBN63HUVI1" class="whatsapp-button" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp"> Entrar em contato
+      </a>
+      <a href="https://maps.app.goo.gl/2sGL2LqXvTiCM62p9" class="map-button" target="_blank">
+        📍 Como chegar
+      </a>
+    </div>
+  </section>
+
+  <section id="peliculas" class="peliculas">
+    <h2>Nossas Películas</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Carbon</h3>
+        <p>Película de entrada com 3 anos de garantia.</p>
+      </div>
+      <div class="card">
+        <h3>Window Premium</h3>
+        <p>Alta rejeição solar e garantia vitalícia.</p>
+      </div>
+      <div class="card">
+        <h3>Window Blue</h3>
+        <p>Incolor, ideal para para-brisas, com alta rejeição solar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="servicos">
+    <h2>PPF e Envelopamento</h2>
+    <p>Proteja a pintura do seu veículo com nossa película de proteção (PPF) ou personalize com nosso envelopamento automotivo de alta qualidade.</p>
+    <video autoplay muted loop playsinline class="servico-video">
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section id="galeria" class="galeria">
+    <h2>Alguns dos nossos trabalhos</h2>
+    <div class="galeria-imagens">
+      <img src="img1.jpeg" alt="Trabalho 1">
+      <img src="img2.jpeg" alt="Trabalho 2">
+      <img src="img3.jpeg" alt="Trabalho 3">
+    </div>
+  </section>
+
+  <footer id="contato">
+    © 2025 Upgrade Auto Service. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
