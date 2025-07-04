@@ -23,19 +23,27 @@ header {
   height: 50px;
 }
 .menu-icon {
-  position: absolute;
+  position: fixed;
   top: 20px;
-  right: 10px; /* você pode diminuir aqui se estiver muito à direita */
+  right: 10px; /* Ajuste esse valor se ainda estiver muito pra direita */
   font-size: 28px;
   color: white;
   cursor: pointer;
   z-index: 1000;
+  padding: 10px;
 }
 .hidden-menu {
   display: none;
   flex-direction: column;
   background-color: #222;
   padding: 10px;
+  position: fixed;
+  top: 60px; /* abaixo da logo */
+  right: 10px;
+  width: 200px;
+  z-index: 9999; /* Muito alto pra ficar acima de tudo */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .hidden-menu a {
   color: white;
