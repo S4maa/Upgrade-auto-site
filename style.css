@@ -1,144 +1,130 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #111;
-  background-image: url('fundo.png');
-  background-size: contain;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }
-header {
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: #000;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
+  padding: 10px 20px;
+  z-index: 1000;
 }
+
 .logo {
-  height: 50px;
+  height: 60px;
+  margin-left: 20px;
 }
+
 .menu-icon {
-  position: fixed;
-  top: 20px;
-  right: 10px; /* Ajuste esse valor se ainda estiver muito pra direita */
   font-size: 28px;
   color: white;
   cursor: pointer;
-  z-index: 1000;
-  padding: 10px;
 }
+
 .hidden-menu {
   display: none;
   flex-direction: column;
   background-color: #222;
-  padding: 10px;
-  position: fixed;
-  top: 60px; /* abaixo da logo */
+  position: absolute;
+  top: 60px;
   right: 10px;
   width: 200px;
-  z-index: 9999; /* Muito alto pra ficar acima de tudo */
-  border-radius: 8px;
+  z-index: 1001;
+  border-radius: 6px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-.hidden-menu a {
-  color: white;
-  padding: 10px 0;
-  text-decoration: none;
-}
+
 .hidden-menu.open {
   display: flex;
 }
-.hero {
+
+.hidden-menu a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.parallax-video {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
-#bg-video {
+
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+  z-index: 1;
+}
+
+.video-texto {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
-  filter: blur(1px);
-  z-index: -1;
-}
-.hero-text {
-  z-index: 2;
-  max-width: 800px;
-  padding: 20px;
-}
-.hero-text h1 {
-  font-size: 36px;
-  color: #fff;
-}
-.hero-text p {
-  font-size: 20px;
-  color: #ddd;
-}
-.whatsapp-button, .map-button {
-  display: inline-block;
-  margin: 20px 10px;
-  padding: 12px 24px;
-  background-color: #25D366;
   color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
+  text-align: center;
+  z-index: 2;
 }
-.map-button {
-  background-color: #ff4444;
+
+.conteudo {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: auto;
 }
-.whatsapp-button img {
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 10px;
-}
+
 section {
-  padding: 80px 20px 60px;
-  text-align: center;
+  margin-bottom: 60px;
 }
-.cards {
+
+h2 {
+  color: #e53935;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+.galeria {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-}
-.card {
-  background: rgba(28, 28, 28, 0.9);
-  padding: 20px;
-  border-radius: 8px;
-  width: 250px;
-}
-.servico-video {
-  width: 90%;
-  max-width: 600px;
-  margin-top: 20px;
-  border-radius: 8px;
-}
-.galeria-imagens {
-  display: flex;
-  gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 15px;
   margin-top: 20px;
 }
-.galeria-imagens img {
-  width: 300px;
+
+.galeria img {
+  width: 30%;
+  height: auto;
   border-radius: 8px;
-}
-footer {
-  padding: 30px;
-  text-align: center;
-  color: #777;
+  object-fit: cover;
 }
