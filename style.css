@@ -23,9 +23,13 @@ header {
   height: 50px;
 }
 .menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 10px; /* você pode diminuir aqui se estiver muito à direita */
   font-size: 28px;
   color: white;
   cursor: pointer;
+  z-index: 1000;
 }
 .hidden-menu {
   display: none;
