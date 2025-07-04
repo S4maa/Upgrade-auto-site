@@ -34,7 +34,7 @@
   </section>
 
   <main class="conteudo">
-    <section id="insulfilm">
+    <section id="insulfilm" class="servico">
       <h2>Insulfilm</h2>
       <p>O Insulfilm é a solução ideal para quem busca conforto térmico e proteção contra os raios solares...</p>
       <h3>Tipos de Películas:</h3>
@@ -50,7 +50,7 @@
       </div>
     </section>
 
-    <section id="ppf">
+    <section id="ppf" class="servico">
       <h2>Película de Proteção de Pintura (PPF)</h2>
       <p>O PPF é uma película transparente de alta resistência que protege a pintura contra riscos...</p>
       <ul>
@@ -66,7 +66,7 @@
       </div>
     </section>
 
-    <section id="envelopamento">
+    <section id="envelopamento" class="servico">
       <h2>Envelopamento de Veículos</h2>
       <p>Ideal para personalizar e proteger, o envelopamento transforma o visual do seu carro...</p>
       <ul>
@@ -78,14 +78,15 @@
       <div class="galeria">
         <img src="envelopamento1.jpeg" alt="Envelopamento 1">
         <img src="envelopamento2.jpeg" alt="Envelopamento 2">
-        <img src="envelopamento3.jpg" alt="Envelopamento 3">
+        <img src="envelopamento3.jpeg" alt="Envelopamento 3">
       </div>
     </section>
   </main>
 
   <script>
     function toggleMenu() {
-      document.getElementById('hiddenMenu').classList.toggle('open');
+      const menu = document.getElementById('hiddenMenu');
+      menu.classList.toggle('open');
     }
   </script>
 </body>
