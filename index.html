@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,6 +8,7 @@
 </head>
 <body>
 
+  <!-- TOPO -->
   <header class="header">
     <img src="logo-upgrade.png" alt="Logo Upgrade Auto Service" class="logo">
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
@@ -21,7 +21,11 @@
     </nav>
   </header>
 
+  <!-- VIDEO DE FUNDO -->
   <section class="parallax-video">
+    <div class="logo-central-container">
+      <img src="logo-upgrade.png" alt="Logo Central" class="logo-central">
+    </div>
     <video autoplay muted loop playsinline id="video-bg">
       <source src="video.mp4" type="video/mp4">
       Seu navegador não suporta vídeo.
@@ -30,34 +34,42 @@
     <div class="video-texto">
       <h1>Transformamos seu veículo</h1>
       <p>Películas com alta retenção solar, conforto e estilo</p>
+      <div class="botoes-contato">
+        <a href="https://wa.me/message/R57LHBN63HUVI1" target="_blank" class="botao-whats">
+          <img src="whatsapp.png" alt="WhatsApp" class="icone-whats"> Entrar em contato
+        </a>
+        <a href="https://maps.app.goo.gl/jNYkCbo5gHx4YKaaA" target="_blank" class="botao-maps">
+          📍 Como chegar
+        </a>
+      </div>
     </div>
   </section>
 
+  <!-- CONTEÚDO -->
   <main class="conteudo">
     <section id="insulfilm" class="servico">
       <h2>Insulfilm</h2>
-      <p>O Insulfilm é a solução ideal para quem busca conforto térmico e proteção contra os raios solares...</p>
-      <h3>Tipos de Películas:</h3>
+      <p>O Insulfilm é a solução ideal para quem busca conforto térmico e proteção contra os raios solares, sem abrir mão do visual e da segurança.</p>
       <ul>
-        <li><strong>Carbon:</strong> 3 anos de garantia</li>
-        <li><strong>Window Premium:</strong> Garantia vitalícia</li>
-        <li><strong>Window Blue:</strong> Incolor, ideal para para-brisas</li>
+        <li><strong>Carbon:</strong> Película de entrada com 3 anos de garantia</li>
+        <li><strong>Window Premium:</strong> Alta rejeição solar, com garantia vitalícia</li>
+        <li><strong>Window Blue:</strong> Incolor e ideal para para-brisas, com mesma proteção da Premium</li>
       </ul>
       <div class="galeria">
         <img src="insulfilm1.jpeg" alt="Insulfilm 1">
-        <img src="insulfilm2.jpeg" alt="Insulfilm 2">
+        <img src="insulfilm2.jpg" alt="Insulfilm 2">
         <img src="insulfilm3.jpeg" alt="Insulfilm 3">
       </div>
     </section>
 
     <section id="ppf" class="servico">
       <h2>Película de Proteção de Pintura (PPF)</h2>
-      <p>O PPF é uma película transparente de alta resistência que protege a pintura contra riscos...</p>
+      <p>A PPF é ideal para quem quer preservar a pintura original do carro com um acabamento invisível e resistente.</p>
       <ul>
-        <li>Proteção contra riscos e manchas</li>
-        <li>Alta resistência à abrasão</li>
-        <li>Preserva a estética original</li>
-        <li>Fácil de limpar</li>
+        <li>Protege contra riscos, arranhões e impactos leves</li>
+        <li>Não altera a cor original do veículo</li>
+        <li>Alta durabilidade e resistência ao tempo</li>
+        <li>Facilita a limpeza e repele sujeira</li>
       </ul>
       <div class="galeria">
         <img src="ppf1.jpeg" alt="PPF 1">
@@ -66,19 +78,29 @@
       </div>
     </section>
 
+    <!-- VÍDEO 2 -->
+    <section class="video-extra">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline controls>
+          <source src="video2.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+    </section>
+
     <section id="envelopamento" class="servico">
       <h2>Envelopamento de Veículos</h2>
-      <p>Ideal para personalizar e proteger, o envelopamento transforma o visual do seu carro...</p>
+      <p>Transforme o visual do seu carro com proteção e estilo usando envelopamento profissional.</p>
       <ul>
-        <li>Variedade de cores e acabamentos</li>
-        <li>Proteção contra pequenos danos</li>
-        <li>Opções fosco, brilhante e metálico</li>
-        <li>Reversível a qualquer momento</li>
+        <li>Várias cores, texturas e acabamentos</li>
+        <li>Protege contra raios UV e pequenos arranhões</li>
+        <li>Ideal para renovação estética ou identidade visual</li>
+        <li>Reversível sem danificar a pintura original</li>
       </ul>
       <div class="galeria">
         <img src="envelopamento1.jpeg" alt="Envelopamento 1">
         <img src="envelopamento2.jpeg" alt="Envelopamento 2">
-        <img src="envelopamento3.jpeg" alt="Envelopamento 3">
+        <img src="envelopamento3.jpg" alt="Envelopamento 3">
       </div>
     </section>
   </main>
@@ -89,5 +111,6 @@
       menu.classList.toggle('open');
     }
   </script>
+
 </body>
 </html>

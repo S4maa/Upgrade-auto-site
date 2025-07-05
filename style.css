@@ -20,15 +20,15 @@ body {
 
 .logo {
   height: 60px;
-  margin-left: 10px;
-  z-index: 1002;
 }
 
 .menu-icon {
-  font-size: 28px;
+  font-size: 30px;
   color: white;
   cursor: pointer;
-  margin-right: 10px;
+  position: absolute;
+  right: 5px;
+  top: 18px;
   z-index: 1002;
 }
 
@@ -56,6 +56,18 @@ body {
   border-bottom: 1px solid #444;
 }
 
+.logo-central-container {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.logo-central {
+  height: 110px;
+}
+
 .parallax-video {
   position: relative;
   height: 100vh;
@@ -71,7 +83,7 @@ body {
   object-fit: cover;
   z-index: 0;
   will-change: transform;
-  filter: brightness(0.7);
+  filter: brightness(0.8);
 }
 
 .video-overlay {
@@ -86,12 +98,62 @@ body {
 
 .video-texto {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
   z-index: 2;
+}
+
+.botoes-contato {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.botao-whats,
+.botao-maps {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.botao-maps {
+  background-color: #555;
+}
+
+.icone-whats {
+  width: 24px;
+  margin-right: 8px;
+}
+
+.video-extra {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper {
+  width: 80%;
+  max-width: 800px;
+}
+
+.video-extra video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
 .conteudo {
@@ -105,7 +167,7 @@ section {
 }
 
 h2 {
-  color: #e53935;
+  color: #fff;
   margin-bottom: 10px;
 }
 
@@ -133,7 +195,6 @@ ul li {
 }
 
 .servico {
-  border: 2px solid #e53935;
   border-radius: 12px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.6);
